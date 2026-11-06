@@ -20,6 +20,23 @@ typedef std::string text_t;
 
 using number_t = int;
 
+// 13. declare a function & function overloading
+
+void happyBirthday(std::string name) {
+	std::cout << "this is not a joke" << name;
+}
+
+void happyBirthday() {
+	std::cout << "Here is nothing";
+}
+
+// 14. Global Scope - function can't see into the other function
+{
+int GINGER = 1e9;
+}
+
+
+
 int main()
 {
     // 1. Basic Output & Variables -----------------------------
@@ -67,7 +84,7 @@ int main()
 
     srand(time(NULL));     // Seed the random number generator
     int dice = rand() % 6; // Generate a random number between 0 and 5
-    // int dice = rand() % 6 + 1; // Generate a random number between 1 and 6
+    int dice = rand() % 6 + 1; // Generate a random number between 1 and 6
     std::cout << dice;
 
     // 5. Loops ---------------------------------------------
@@ -91,7 +108,7 @@ int main()
 
     // 8. Operators ---------------------------------------------
 
-    // same as that of C (+, -, *, /, %, <<, <, >, ==, =, !=, >>, ^, &&, &, ||, |)
+    	// same as that of C (+, -, *, /, %, <<, <, >, ==, =, !=, >>, ^, &&, &, ||, |)
 
     // 9. Explicit type conversion ---------------------------------------------
 
@@ -99,7 +116,7 @@ int main()
 
     // 10. Math functions ---------------------------------------------
 
-    double x = 3;
+    double x = 3;	//local scope
     double y = 4;
     double z;
 
@@ -137,4 +154,11 @@ int main()
     name.empty();                     // Check if string is empty
     name.clear();                     // Clear the string
     name.at(0);                       // Access character at index 0
+    
+    // 15. when we press enter we have the newline character so we want to get rid of it
+    
+    std::cin.clear(); 
+    fflush(stdin);
+    
+    
 }
